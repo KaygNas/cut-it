@@ -1,6 +1,7 @@
-import * as BABYLON from 'babylonjs'
+import * as BABYLON from '@babylonjs/core'
 import { Ground } from './Ground'
 import { Robot } from './Robot'
+import { GUI } from './GUI'
 
 export class App {
   engine: BABYLON.Engine
@@ -33,6 +34,7 @@ function createScene(engine: BABYLON.Engine, canvas: HTMLCanvasElement) {
   const scene = new BABYLON.Scene(engine)
   const robot = Robot.create(scene)
   const ground = Ground.create(scene)
+  const gui = GUI.create(scene)
 
   const camera = new BABYLON.ArcRotateCamera('RobotCamera', Math.PI / 2, Math.PI / 3, 10.0, BABYLON.Vector3.Zero(), scene)
   camera.attachControl(canvas, true)

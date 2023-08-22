@@ -1,9 +1,12 @@
 lockfileVersion: '6.0'
 
 dependencies:
-  babylonjs:
+  '@babylonjs/core':
     specifier: ^6.17.0
     version: 6.17.0
+  '@babylonjs/gui':
+    specifier: ^6.17.0
+    version: 6.17.0(@babylonjs/core@6.17.0)
 
 devDependencies:
   '@antfu/eslint-config':
@@ -149,6 +152,18 @@ packages:
       chalk: 2.4.2
       js-tokens: 4.0.0
     dev: true
+
+  /@babylonjs/core@6.17.0:
+    resolution: {integrity: sha512-Zz+jahgnv8kfPVmslOPvt3Y5Zuvb6dFWGMF6FQ55fTXT7JDQkNqkGYNSOgU4fg3c7rlj7zsXrvM7XFbK3ljelg==}
+    dev: false
+
+  /@babylonjs/gui@6.17.0(@babylonjs/core@6.17.0):
+    resolution: {integrity: sha512-N5tqqj5LWUZLkKvVmrk0dxCzE5hTpCyyC/b/wASJzlkFbIsokm/LSTTyrWcSjIuzTo1fS+XYVEjW6kVVOxfZ7A==}
+    peerDependencies:
+      '@babylonjs/core': ^6.0.0
+    dependencies:
+      '@babylonjs/core': 6.17.0
+    dev: false
 
   /@esbuild/android-arm64@0.18.20:
     resolution: {integrity: sha512-Nz4rJcchGDtENV0eMKUNa6L12zz2zBDXuhj/Vjh18zGqB44Bi7MBMSXjgunJgjRhCmKOjnPuZp4Mb6OKqtMHLQ==}
@@ -709,11 +724,6 @@ packages:
     resolution: {integrity: sha512-HGyxoOTYUyCM6stUe6EJgnd4EoewAI7zMdfqO+kGjnlZmBDz/cR5pf8r/cR4Wq60sL/p0IkcjUEEPwS3GFrIyw==}
     engines: {node: '>=8'}
     dev: true
-
-  /babylonjs@6.17.0:
-    resolution: {integrity: sha512-IYsDJ4alS1aKEG/Au6BqFgCgKUlj1kbXXvDdsVTPOJ1YnV417yW+cjcX2Xqa4kunLEHVqfZY/oUP0q6VzWbFmg==}
-    requiresBuild: true
-    dev: false
 
   /balanced-match@1.0.2:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
