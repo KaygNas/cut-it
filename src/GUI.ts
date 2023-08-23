@@ -3,11 +3,16 @@ import * as BABYLON_GUI from '@babylonjs/gui'
 
 export class GUI {
   root: BABYLON.TransformNode
+  uploadBtn: BABYLON_GUI.Control
+  detectBtn: BABYLON_GUI.Control
+  classifyBtn: BABYLON_GUI.Control
+
   constructor(scene: BABYLON.Scene) {
     const root = new BABYLON.TransformNode('GUI', scene)
     this.root = root
     const gui = BABYLON_GUI.AdvancedDynamicTexture.CreateFullscreenUI('GUI', true, scene)
     const uploadBtn = BABYLON_GUI.Button.CreateSimpleButton('Upload', 'Upload Image')
+    this.uploadBtn = uploadBtn
     uploadBtn.width = '160px'
     uploadBtn.height = '40px'
     uploadBtn.color = 'white'
@@ -17,6 +22,7 @@ export class GUI {
     uploadBtn.verticalAlignment = BABYLON_GUI.Control.VERTICAL_ALIGNMENT_BOTTOM
 
     const detectBtn = BABYLON_GUI.Button.CreateSimpleButton('Detect', 'Detect Image')
+    this.detectBtn = detectBtn
     detectBtn.width = '160px'
     detectBtn.height = '40px'
     detectBtn.color = 'white'
@@ -27,6 +33,7 @@ export class GUI {
     detectBtn.verticalAlignment = BABYLON_GUI.Control.VERTICAL_ALIGNMENT_BOTTOM
 
     const classifyBtn = BABYLON_GUI.Button.CreateSimpleButton('Classify', 'Classify')
+    this.classifyBtn = classifyBtn
     classifyBtn.width = '160px'
     classifyBtn.height = '40px'
     classifyBtn.color = 'white'
