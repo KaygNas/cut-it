@@ -16,7 +16,8 @@
   },
   "dependencies": {
     "@babylonjs/core": "^6.17.0",
-    "@babylonjs/gui": "^6.17.0"
+    "@babylonjs/gui": "^6.17.0",
+    "@babylonjs/inspector": "^6.17.1"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.40.2",

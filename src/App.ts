@@ -1,4 +1,5 @@
 import * as BABYLON from '@babylonjs/core'
+import { Inspector } from '@babylonjs/inspector'
 import { Ground } from './Ground'
 import { Robot } from './Robot'
 import { GUI } from './GUI'
@@ -16,11 +17,11 @@ export class App {
     this.scene = createScene(this.engine, this.canvas)
   }
 
-  debug(debugOn: boolean = true) {
+  async debug(debugOn: boolean = true) {
     if (debugOn)
-      this.scene.debugLayer.show({ overlay: true })
+      Inspector.Show(this.scene, { overlay: true })
     else
-      this.scene.debugLayer.hide()
+      Inspector.Hide()
   }
 
   run() {
